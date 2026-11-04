@@ -66,4 +66,4 @@ Add or update tests with every behaviour change:
 
 ## Reporting bugs and security issues
 
-Open a [bug report](https://github.com/Ramssmb/edugap-ai/issues/new/choose) for normal bugs. **Do not** open public issues for security vulnerabilities; see [SECURITY.md](SECURITY.md).
+Open a [bug report](https://github.com/Ramssmb/noesis-asi/issues/new/choose) for normal bugs. **Do not** open public issues for security vulnerabilities; see [SECURITY.md](SECURITY.md).
