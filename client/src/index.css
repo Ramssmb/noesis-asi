@@ -37,6 +37,14 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
+  svg {
+    display: block;
+    flex-shrink: 0;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+  }
   body {
     @apply bg-surface text-slate-700;
   }
