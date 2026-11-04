@@ -4,11 +4,11 @@ export type Variant = "primary" | "secondary" | "ghost" | "danger" | "outline" |
 export type Size = "sm" | "md" | "lg" | "icon";
 
 const VARIANTS: Record<Variant, string> = {
-  primary: "bg-brand-600 text-white shadow-sm shadow-brand-600/20 hover:bg-brand-700 active:bg-brand-800",
-  secondary: "bg-ink text-white hover:bg-slate-800",
-  outline: "border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 hover:border-slate-400",
+  primary: "bg-brand-700 text-white shadow-sm shadow-brand-700/20 hover:bg-brand-800 active:bg-brand-900",
+  secondary: "bg-ink text-white shadow-sm hover:bg-slate-800",
+  outline: "border border-slate-300 bg-white text-slate-700 shadow-sm hover:border-brand-300 hover:bg-brand-50/50",
   ghost: "text-slate-600 hover:bg-slate-100 hover:text-ink",
-  soft: "bg-brand-50 text-brand-700 hover:bg-brand-100",
+  soft: "border border-brand-100 bg-brand-50 text-brand-700 hover:bg-brand-100",
   danger: "bg-rose-600 text-white hover:bg-rose-700",
 };
 const SIZES: Record<Size, string> = {
@@ -19,4 +19,4 @@ const SIZES: Record<Size, string> = {
 };
 
 export const buttonClass = (variant: Variant = "primary", size: Size = "md", className?: string) =>
-  cn("inline-flex shrink-0 items-center justify-center font-medium whitespace-nowrap transition-all duration-150 disabled:pointer-events-none disabled:opacity-50", VARIANTS[variant], SIZES[size], className);
+  cn("inline-flex shrink-0 items-center justify-center font-semibold whitespace-nowrap transition-all duration-150 focus-visible:ring-4 focus-visible:ring-brand-100 disabled:pointer-events-none disabled:opacity-50", VARIANTS[variant], SIZES[size], className);

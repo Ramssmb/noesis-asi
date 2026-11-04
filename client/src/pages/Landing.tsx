@@ -67,10 +67,10 @@ function HeroPreview() {
       <div className="card overflow-hidden p-5 sm:p-6">
         <div className="flex items-center justify-between">
           <div>
-            <div className="text-xs font-semibold tracking-wider text-brand-600 uppercase">Gap report · Mathematics</div>
+            <div className="eyebrow">Learning signal · Mathematics</div>
             <div className="mt-1 font-display text-lg font-bold text-ink">What Aarav doesn't understand yet</div>
           </div>
-          <span className="rounded-full bg-violet-50 px-2.5 py-1 text-xs font-medium text-violet-700 ring-1 ring-violet-200">Sample</span>
+          <span className="rounded-md border border-slate-200 bg-slate-50 px-2.5 py-1 text-[11px] font-bold tracking-wide text-slate-500 uppercase">Preview</span>
         </div>
         <div className="mt-5 space-y-3.5">
           {topics.map((t) => (
@@ -94,7 +94,7 @@ function HeroPreview() {
           </p>
         </div>
         <div className="mt-3 flex items-center gap-3 rounded-xl border border-brand-100 bg-brand-50/60 p-4">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-600 text-white">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-700 text-white shadow-sm shadow-brand-700/20">
             <Sparkles className="h-4 w-4" />
           </div>
           <div className="min-w-0 flex-1 text-sm">
@@ -208,8 +208,8 @@ export default function Landing() {
               <div key={s.title} className="relative">
                 <div className="card h-full p-6 transition hover:-translate-y-1 hover:shadow-lg">
                   <div className="flex items-center justify-between">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-brand-600 to-violet-600 text-white [&_svg]:h-5 [&_svg]:w-5">{s.icon}</div>
-                    <span className="font-display text-4xl font-extrabold text-slate-100">0{i + 1}</span>
+                    <div className="icon-tile h-11 w-11 rounded-xl [&_svg]:h-5 [&_svg]:w-5">{s.icon}</div>
+                    <span className="font-display text-4xl font-extrabold text-slate-200/80">0{i + 1}</span>
                   </div>
                   <h3 className="mt-5 text-lg font-bold">{s.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-slate-600">{s.text}</p>
@@ -224,7 +224,7 @@ export default function Landing() {
       <section id="features" className="bg-brand-950 py-20 text-brand-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <div className="text-sm font-semibold tracking-wider text-brand-300 uppercase">Key features</div>
+            <div className="eyebrow text-brand-300">Key features</div>
             <h2 className="mt-2 text-3xl font-extrabold text-white sm:text-4xl">AI that does real teaching work — not just a chatbot</h2>
           </div>
           <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-3">

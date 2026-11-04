@@ -29,19 +29,20 @@ export function Logo({ className, light }: { className?: string; light?: boolean
   const gid = `logo${useId().replace(/[^a-zA-Z0-9_-]/g, "")}`;
   return (
     <span className={cn("inline-flex items-center gap-2.5", className)}>
-      <svg viewBox="0 0 32 32" className="h-8 w-8 shrink-0" aria-hidden>
+      <svg viewBox="0 0 36 36" className="h-9 w-9 shrink-0" aria-hidden>
         <defs>
           <linearGradient id={gid} x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stopColor="#4f46e5" />
-            <stop offset="1" stopColor="#7c3aed" />
+            <stop offset="0" stopColor="#34479a" />
+            <stop offset="1" stopColor="#17213f" />
           </linearGradient>
         </defs>
-        <rect width="32" height="32" rx="9" fill={`url(#${gid})`} />
-        <path d="M9 21.5 14 11l3.5 7 2-3.5L23 21.5" fill="none" stroke="#fff" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
-        <circle cx="19.5" cy="14.5" r="1.8" fill="#a5f3fc" />
+        <rect x="1" y="1" width="34" height="34" rx="10" fill={`url(#${gid})`} />
+        <path d="M10 25V11l8 9 8-9v14" fill="none" stroke="#fff" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="27" cy="9" r="2" fill="#a8b8f5" />
       </svg>
-      <span className={cn("font-display text-lg font-extrabold tracking-tight", light ? "text-white" : "text-ink")}>
-        NOESIS<span className={light ? "text-brand-300" : "text-brand-600"}> AI</span>
+      <span className={cn("font-display leading-none tracking-tight", light ? "text-white" : "text-ink")}>
+        <span className="block text-[1.05rem] font-extrabold">NOESIS<span className={light ? "text-brand-300" : "text-brand-600"}> AI</span></span>
+        <span className={cn("mt-1 block text-[8px] font-semibold tracking-[0.28em] uppercase", light ? "text-brand-300/80" : "text-slate-400")}>Νόησις</span>
       </span>
     </span>
   );
