@@ -1,0 +1,44 @@
+{
+  "name": "noesis-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-powered personalized learning and knowledge gap detection platform",
+  "license": "MIT",
+  "author": "Maloth Bhavsingh",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ramssmb/noesis-asi.git"
+  },
+  "homepage": "https://github.com/Ramssmb/noesis-asi#readme",
+  "bugs": {
+    "url": "https://github.com/Ramssmb/noesis-asi/issues"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,magenta \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w client && npm run build -w server",
+    "start": "npm run start -w server",
+    "seed": "npm run seed -w server",
+    "test": "npm run test -w server",
+    "typecheck": "npm run typecheck -w server && npm run typecheck -w client",
+    "create-admin": "npm run create-admin -w server",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "check": "npm run lint && npm run typecheck && npm test && npm run build"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "concurrently": "^10.0.6",
+    "eslint": "^10.14.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^17.14.0",
+    "typescript-eslint": "^8.72.1"
+  }
+}
